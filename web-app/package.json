@@ -1,0 +1,14 @@
+{
+    "name": "admin-panel",
+    "version": "0.3.0",
+    "main": "index.html",
+    "window": {
+        "toolbar": false,
+        "frame": true,
+        "width": 1200,
+        "height": 700,
+        "position": "center",
+        "resizable": true,
+        "single-instance": true
+    }
+}

@@ -1,0 +1,37 @@
+apply plugin: 'java'
+apply plugin: 'gradle-one-jar'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'org.eclipse.jetty:jetty-server:9.2.5.v20141112'
+    compile 'org.eclipse.jetty:jetty-server:9.2.5.v20141112'
+    compile 'org.eclipse:swt:3.3.0-v3346'
+
+}
+
+
+task awesomeFunJar(type: OneJar) {
+    mainClass = 'org.egreen.richdesktop.ui.SplashScreenFrom'
+
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.egreen.richdesktop.ui.SplashScreenFrom'
+    }
+}

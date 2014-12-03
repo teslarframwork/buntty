@@ -1,0 +1,6 @@
+rootProject.name = 'core'
+
+include 'server'
+
+include 'desktop-client'
+
